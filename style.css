@@ -58,6 +58,23 @@ div[data-testid="metric-container"] {
     padding: 15px;
     box-shadow: 0 0 10px #00ffe5;
 }
+/* Plotly Graph Background Fix */
+div[data-testid="stPlotlyChart"] .js-plotly-plot {
+    background-color: transparent !important;
+}
+
+/* General SVG & Graph Background */
+svg {
+    background-color: transparent !important;
+}
+
+/* Chart Container Fix */
+div[data-testid="stPlotlyChart"] {
+    background-color: transparent !important;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffe5;
+    padding: 10px;
+}
 
 /* Link styling */
 a {
@@ -118,56 +135,4 @@ div[role="alert"]:has(svg[data-testid="stWarning"]) {
     0% { opacity: 1; }
     50% { opacity: 0.8; }
     100% { opacity: 1; }
-}
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-    .stApp {
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    h1, h2, h3 {
-        color: #000;
-        text-shadow: none;
-        animation: none;
-    }
-
-    div.stButton > button {
-        color: #000;
-        border: 2px solid #000;
-        box-shadow: none;
-    }
-
-    div.stButton > button:hover {
-        background-color: #000;
-        color: #fff;
-        box-shadow: 0 0 10px #000;
-    }
-
-    section[data-testid="stSidebar"] {
-        background-color: #f0f0f0;
-        color: #000;
-        box-shadow: 0 0 10px #999;
-    }
-
-    div[data-testid="metric-container"] {
-        background-color: rgba(255,255,255,0.3);
-        border: 1px solid #000;
-        box-shadow: 0 0 5px #000;
-    }
-
-    a {
-        color: #0000ee;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-
-    div[role="alert"] {
-        color: #000;
-        background-color: #f9f9f9;
-        border: 2px solid #000;
-        box-shadow: none;
-        animation: slideInRight 0.7s ease-out;
-    }
 }
