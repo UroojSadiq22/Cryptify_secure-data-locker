@@ -68,13 +68,7 @@ svg {
     background-color: transparent !important;
 }
 
-/* Chart Container Fix */
-div[data-testid="stPlotlyChart"] {
-    background-color: transparent !important;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ffe5;
-    padding: 10px;
-}
+
 
 /* Link styling */
 a {
