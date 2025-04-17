@@ -1,0 +1,121 @@
+/* Global Dark Background */
+.stApp {
+    
+    color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Glowing Header */
+h1, h2, h3 {
+    text-align: center;
+    color: #00ffe5;
+    text-shadow:
+        0 0 5px #00ffe5,
+        0 0 10px #00ffe5,
+        0 0 20px #00ffe5,
+        0 0 40px #00ffe5;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Neon Button */
+div.stButton > button {
+    background-color: transparent;
+    color: #00ffe5;
+    border: 2px solid #00ffe5;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 0 10px #00ffe5;
+    transition: 0.3s ease-in-out;
+}
+
+div.stButton > button:hover {
+    border: #00ffe5;
+    background-color: #00ffe5;
+    color: #000;
+    box-shadow: 0 0 20px #00ffe5, 0 0 30px #00ffe5;
+}
+
+/* Animated Glowing Box */
+.stAlert-success {
+    border-radius: 12px;
+    background-color: rgba(0, 255, 229, 0.1);
+    box-shadow: 0 0 10px #00ffe5, 0 0 20px #00ffe5 inset;
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: #111111;
+    color: #00ffe5;
+    box-shadow: 0 0 15px #00ffe5;
+}
+
+/* Metric Styling */
+div[data-testid="metric-container"] {
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid #00ffe5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px #00ffe5;
+}
+
+/* Link styling */
+a {
+    color: #00ffe5;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Base Alert Styling */
+div[role="alert"] {
+    border-radius: 10px;
+    padding: 1rem;
+    font-weight: bold;
+    animation: slideInRight 0.7s ease-out, neonPulse 2s infinite alternate;
+    position: relative;
+}
+
+/* Success Message Styling */
+div[role="alert"]:has(svg[data-testid="stSuccess"]) {
+    color: #00ff99;
+    background-color: rgba(0, 255, 100, 0.08);
+    border: 2px solid #00ff99;
+    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+}
+
+/* Error Message Styling */
+div[role="alert"]:has(svg[data-testid="stError"]) {
+    color: #ff0066;
+    background-color: rgba(255, 0, 100, 0.08);
+    border: 2px solid #ff0066;
+    box-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066;
+}
+
+/* Warning Message Styling */
+div[role="alert"]:has(svg[data-testid="stWarning"]) {
+    color: #ffff33;
+    background-color: rgba(255, 255, 0, 0.08);
+    border: 2px solid #ffff33;
+    box-shadow: 0 0 10px #ffff33, 0 0 20px #ffff33;
+}
+
+/* Slide In from Right Animation */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Flicker animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
